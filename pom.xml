@@ -20,10 +20,34 @@
                <artifactId>joda-time</artifactId>
                <version>2.2</version>
            </dependency>
+           <dependency>
+               <groupId>org.junit.jupiter</groupId>
+               <artifactId>junit-jupiter-engine</artifactId>
+               <version>5.3.1</version>
+               <scope>test</scope> 
+           </dependency>
+            <dependency>
+               <groupId>javax.annotation</groupId>
+               <artifactId>javax.annotation-api</artifactId>
+               <version>1.2</version>
+            </dependency>
        </dependencies>
        <!-- end::joda[] -->
+   <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>a0cm4lds1fcpz-artifactory-primary-0-releases</name>
+        <url>https://poojamishra1312.jfrog.io/artifactory/first-repo</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>a0cm4lds1fcpz-artifactory-primary-0-snapshots</name>
+        <url>https://poojamishra1312.jfrog.io/artifactory/first-repo</url>
+    </snapshotRepository>
+</distributionManagement>
        
     <build>
+        <finalName>maven-unit-test</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
